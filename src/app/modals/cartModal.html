@@ -1,0 +1,28 @@
+<div *ngIf="visible" class="modal fade in" id="myModal" role="dialog" style="display: block; padding-left: 17px;">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" (click)="closeModal()">×</button>
+              <h4 class="modal-title">Selected Recipes</h4>
+            </div>
+            <div class="modal-body">
+                <ul id="grouplist" class="list-group content scroll scroll1" style="margin-left: -15px; border: 1px solid #ccc; border-radius: 4px;" >
+                    <li class="list-group-item" *ngFor="let receipe of selectedCartArray; let i = index">
+                            <h4 class="list-group-item-heading" title="Title">{{receipe.title}}</h4>
+                            <p class="list-group-item-text" title="Publisher">{{receipe.publisher}}
+                            <a class="pull-right" href="javascript:void(0)">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart
+                            </a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" (click)="closeModal()">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>

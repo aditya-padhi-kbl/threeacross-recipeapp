@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/bootstrap//dist/css/bootstrap.min.css');
+
+.scroll {
+    height: 400px;
+    overflow: auto;
+  }
+  .content {
+    height: 400px;
+  }
+  .scroll1::-webkit-scrollbar {
+    width: 5px;
+  }
+  .scroll1::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+  .scroll1::-webkit-scrollbar-thumb {
+    background: #666;
+  }
+  
