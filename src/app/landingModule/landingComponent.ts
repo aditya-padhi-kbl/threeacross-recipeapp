@@ -4,7 +4,6 @@ import { SortOrder } from '../enums';
 import { ReceipeModel } from '../models/receipeModel';
 import { FormControl } from '@angular/forms';
 import { CartModalComponent } from '../modals/cartModal';
-import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/throttleTime';
 import 'rxjs/add/observable/fromEvent';
@@ -54,7 +53,7 @@ export class LandingComponent implements OnInit {
     }
     ngOnInit(): void {
         console.log('Hello World');
-        this.searchFormControl.valueChanges.debounceTime(400).subscribe( (result) {
+        this.searchFormControl.valueChanges.debounceTime(400).subscribe( (result) => {
             this.searchIngredent(result);
         });
         this.filterList(this.sortOrder.r);
