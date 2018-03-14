@@ -1,4 +1,6 @@
-export const testData = {
+import { IReceipeStruct } from '../interface';
+
+export const testData: IReceipeStruct = {
     count: 8,
     recipes: [
       {
