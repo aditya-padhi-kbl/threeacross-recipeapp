@@ -2,7 +2,7 @@
 A sample web app
 
 # Install the dependencies
-```npm install```
+```yarn install```
 
 # To start the application in dev mode
 ```npm run start```
