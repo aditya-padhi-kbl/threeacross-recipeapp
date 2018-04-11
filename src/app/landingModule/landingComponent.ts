@@ -32,7 +32,17 @@ export class LandingComponent implements OnInit {
     filterList = (filterCriteria: SortOrder) => {
         this.receipeService.getSortedReceipe(filterCriteria)
             .subscribe( (result) => {
-                this.receipeArray = result.recipes;
+                this.receipeArray = result.recipes.sort( function (a, b) {
+                    const param1 = a.title.toUpperCase();
+                    const param2 = b.title.toUpperCase();
+                    if (param1 < param2) {
+                        return -1;
+                    } else if (param1 > param2) {
+                        return 1;
+                    } else {
+                        return 0;
+                    }
+                });
             });
     }
 
